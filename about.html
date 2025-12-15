@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauzan Aidil Luthfi - Portfolio</title>
+
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 3 JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .jumbotron {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://png.pngtree.com/background/20250111/original/pngtree-a-dark-night-in-a-city-with-a-street-full-of-picture-image_12956738.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            margin-bottom: 0;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+
+        .thumbnail {
+            transition: transform 0.3s;
+            border: 2px solid #e0e0e0;
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: #4CAF50;
+        }
+
+        .skill-bar {
+            margin-bottom: 15px;
+        }
+
+        .progress {
+            height: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #4CAF50;
+        }
+
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+        #moreInfo {
+            margin-top: 15px;
+        }
+
+        .alert-success-custom {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 4px solid #2196F3;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f5f5f5;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 0;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            background-color: #e9e9e9;
+        }
+
+        .social-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        .social-btn {
+            display: inline-block;
+            margin: 2px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .label-custom {
+            display: inline-block;
+            margin: 5px 3px;
+        }
+
+        .jumbotron h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .jumbotron p {
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">
+                    <span class="glyphicon glyphicon-user"></span> Fauzan Aidil
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#register">Registrasi</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login" data-toggle="modal" data-target="#loginModal">
+                            <span class="glyphicon glyphicon-log-in"></span> Login
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="home" class="jumbotron">
+        <div class="container text-center">
+            <h1>FAUZAN AIDIL LUTHFI</h1>
+            <p>Seorang Programmer Dan Developer Yang Berasal Dari Indonesia</p>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutModal">
+                <span class="glyphicon glyphicon-info-sign"></span> Pelajari Lebih Lanjut
+            </button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Tentang Saya</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Profil</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Gambar profil dari Unsplash -->
+                        <img src="WhatsApp Image 2024-02-16 at 21.27.49.jpeg"
+                            class="img-responsive img-circle profile-img" alt="Fauzan Aidil Luthfi">
+                        <h4 class="text-center" style="margin-top: 15px; color: #333;">Fauzan Aidil Luthfi</h4>
+                        <p class="text-center" style="color: #666; font-weight: 500;">Web Developer & Designer</p>
+
+                        <!-- Informasi tambahan -->
+                        <div class="text-center" style="margin-top: 15px;">
+                            <span class="label label-success label-custom">Available for Work</span>
+                            <span class="label label-info label-custom">Freelancer</span>
+                        </div>
+
+                        <div class="social-container">
+                            <a href="https://discord.com" target="_blank" class="social-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord"
+                                    class="social-icon">
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"
+                                    class="social-icon">
+                            </a>
+                            <a href="https://facebook.com" target="_blank" class="social-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook"
+                                    class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Informasi Pribadi</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Saya seorang web developer dengan lebih dari tiga tahun pengalaman membuat aplikasi web
+                            kontemporer. Spesialisasi saya adalah pengembangan front-end, desain UI/UX, dan desain web
+                            responsif.</p>
+
+                        <div class="alert alert-info">
+                            <strong>Pendidikan:</strong> S1 Teknik Informatika - Universitas Medan Area
+                        </div>
+
+                        <div class="alert alert-success">
+                            <strong>Hobi:</strong> Programming Dan Gaming
+                        </div>
+
+                        <button class="btn btn-success" data-toggle="collapse" data-target="#moreInfo">
+                            <span class="glyphicon glyphicon-chevron-down"></span> Info Lebih Lanjut
+                        </button>
+
+                        <div id="moreInfo" class="collapse">
+                            <p class="mt-3">Saya adalah seorang pengembang digital yang memiliki passion kuat dalam
+                                menciptakan
+                                solusi inovatif, modern, dan user-friendly. Saya senang mengeksplorasi teknologi
+                                terbaru, memahami kebutuhan pengguna, serta mengubah ide menjadi pengalaman digital yang
+                                nyata.</p>
+
+                            <p>Dalam setiap proyek, saya selalu berusaha menghadirkan desain yang bersih, fungsional,
+                                dan efisien, sekaligus terus menantang diri saya untuk berkembang lewat teknologi baru
+                                dan tantangan yang lebih kompleks.</p>
+
+                            <p>Selain dunia pengembangan, saya juga aktif di dunia gaming, di mana saya banyak
+                                terinspirasi oleh mekanik permainan, desain antarmuka, dan pengalaman interaktif yang
+                                mempengaruhi cara saya membangun aplikasi yang imersif dan dinamis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Portfolio and Achievement</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                        alt="E-Commerce Website" style="height: 200px; object-fit: cover;">
+                    <div class="caption">
+                        <h4>Website E-Commerce</h4>
+                        <p>Platform belanja online dengan sistem pembayaran terintegrasi.</p>
+                        <p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#project1Modal">
+                                <span class="glyphicon glyphicon-eye-open"></span> Lihat Detail
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                        alt="Mobile App" style="height: 200px; object-fit: cover;">
+                    <div class="caption">
+                        <h4>Aplikasi Mobile</h4>
+                        <p>Aplikasi produktivitas untuk manajemen tugas harian.</p>
+                        <p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#project2Modal">
+                                <span class="glyphicon glyphicon-eye-open"></span> Lihat Detail
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                        alt="Valorant Achievement" style="height: 200px; object-fit: cover;">
+                    <div class="caption">
+                        <h4>Top Global Valorant Asian Pacific</h4>
+                        <p>Achievement dalam kompetisi gaming tingkat Asia Pasifik.</p>
+                        <p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#project3Modal">
+                                <span class="glyphicon glyphicon-eye-open"></span> Lihat Detail
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Skills & Kemampuan</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Programming Skills</h3>
+                <div class="skill-bar">
+                    <h4>HTML/CSS</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90"
+                            aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                            90%
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <h4>JavaScript</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                            85%
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <h4>PHP</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                            75%
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <h4>UI/UX Design</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Gaming Skills</h3>
+                <div class="skill-bar">
+                    <h4>Valorant</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                            aria-valuemax="100" style="width:95%; background-color: #ff4655;">
+                            95%
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <h4>Point Blank</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                            80%
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <h4>Strategic Gaming</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0"
+                            aria-valuemax="100" style="width:88%; background-color: #9c27b0;">
+                            88%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form Section -->
+    <div id="register" class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Form Registrasi</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-edit"></span> Formulir Pendaftaran
+                            Mahasiswa</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form id="registrationForm">
+                            <!-- Data Pribadi -->
+                            <fieldset>
+                                <legend>Data Pribadi</legend>
+
+                                <div class="form-group">
+                                    <label for="fullname">Nama Lengkap: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" class="form-control" id="fullname" name="fullname"
+                                            placeholder="Masukkan nama lengkap" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nim">NIM: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i
+                                                class="glyphicon glyphicon-credit-card"></i></span>
+                                        <input type="text" class="form-control" id="nim" name="nim"
+                                            placeholder="Contoh: 1234567890" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="birthdate">Tanggal Lahir: <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i
+                                                        class="glyphicon glyphicon-calendar"></i></span>
+                                                <input type="date" class="form-control" id="birthdate" name="birthdate"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Jenis Kelamin: <span class="text-danger">*</span></label>
+                                            <div>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="gender" value="Laki-laki" required>
+                                                    Laki-laki
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="gender" value="Perempuan" required>
+                                                    Perempuan
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address">Alamat Lengkap: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                        <textarea class="form-control" id="address" name="address" rows="3"
+                                            placeholder="Masukkan alamat lengkap" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">No. Telepon: <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i
+                                                        class="glyphicon glyphicon-phone"></i></span>
+                                                <input type="tel" class="form-control" id="phone" name="phone"
+                                                    placeholder="Contoh: 08123456789" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="reg_email">Email: <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i
+                                                        class="glyphicon glyphicon-envelope"></i></span>
+                                                <input type="email" class="form-control" id="reg_email" name="email"
+                                                    placeholder="nama@email.com" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <hr>
+
+                            <!-- Data Akademik -->
+                            <fieldset>
+                                <legend>Data Akademik</legend>
+
+                                <div class="form-group">
+                                    <label for="program">Program Studi: <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="program" name="program" required>
+                                        <option value="">-- Pilih Program Studi --</option>
+                                        <option value="Teknik Informatika">Teknik Informatika</option>
+                                        <option value="Sistem Informasi">Sistem Informasi</option>
+                                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                        <option value="Manajemen Informatika">Manajemen Informatika</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="semester">Semester: <span class="text-danger">*</span></label>
+                                            <select class="form-control" id="semester" name="semester" required>
+                                                <option value="">-- Pilih Semester --</option>
+                                                <option value="1">Semester 1</option>
+                                                <option value="2">Semester 2</option>
+                                                <option value="3">Semester 3</option>
+                                                <option value="4">Semester 4</option>
+                                                <option value="5">Semester 5</option>
+                                                <option value="6">Semester 6</option>
+                                                <option value="7">Semester 7</option>
+                                                <option value="8">Semester 8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="tahun_masuk">Tahun Masuk: <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="tahun_masuk"
+                                                name="tahun_masuk" placeholder="Contoh: 2022" min="2015" max="2025"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Minat Bidang: <span class="text-danger">*</span></label>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="interest[]" value="Web Development"> Web
+                                            Development
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="interest[]" value="Mobile Development"> Mobile
+                                            Development
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="interest[]" value="Data Science"> Data Science
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="interest[]" value="Cyber Security"> Cyber
+                                            Security
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="interest[]" value="UI/UX Design"> UI/UX Design
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <hr>
+
+                            <!-- Dokumen -->
+                            <fieldset>
+                                <legend>Upload Dokumen</legend>
+
+                                <div class="form-group">
+                                    <label for="photo">Pas Foto (JPG/PNG):</label>
+                                    <input type="file" class="form-control" id="photo" name="photo" accept="image/*">
+                                    <p class="help-block">Ukuran maksimal 2MB</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cv">Upload CV (PDF):</label>
+                                    <input type="file" class="form-control" id="cv" name="cv" accept=".pdf">
+                                    <p class="help-block">Format PDF, ukuran maksimal 5MB</p>
+                                </div>
+                            </fieldset>
+
+                            <hr>
+
+                            <!-- Catatan Tambahan -->
+                            <div class="form-group">
+                                <label for="notes">Catatan Tambahan:</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="4"
+                                    placeholder="Tuliskan informasi tambahan jika ada"></textarea>
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="agree" required>
+                                    <span class="text-danger">*</span> Saya menyetujui syarat dan ketentuan yang berlaku
+                                </label>
+                            </div>
+
+                            <div class="form-group text-center" style="margin-top: 20px;">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <span class="glyphicon glyphicon-send"></span> Submit Registrasi
+                                </button>
+                                <button type="reset" class="btn btn-default btn-lg">
+                                    <span class="glyphicon glyphicon-refresh"></span> Reset Form
+                                </button>
+                            </div>
+
+                            <div id="registerAlert" style="margin-top: 20px;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Hubungi Saya</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h4>Informasi Kontak</h4>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Jl. Garu 3 No. 5, Medan</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +62 822-1399-3917</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> fauzanaidhil@gmail.com</p>
+
+                    <div style="margin-top: 20px;">
+                        <h4>Jam Kerja</h4>
+                        <p><span class="glyphicon glyphicon-time"></span> Senin - Jumat: 09:00 - 17:00 WIB</p>
+                        <p><span class="glyphicon glyphicon-time"></span> Sabtu: 09:00 - 14:00 WIB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea class="form-control" rows="5" id="message" placeholder="Tulis pesan Anda"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span class="glyphicon glyphicon-send"></span> Kirim Pesan
+                    </button>
+                </form>
+                <div id="formAlert" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 The ReXa. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-right social-links">
+                    <a href="https://discord.com" target="_blank"><span class="glyphicon glyphicon-comment"></span></a>
+                    <a href="mailto:fauzanaidhil@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <a href="tel:+6282213993917"><span class="glyphicon glyphicon-phone"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tentang Saya</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Detail lengkap tentang profil dan pengalaman kerja saya.</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tahun</th>
+                                    <th>Posisi</th>
+                                    <th>Perusahaan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2022-Sekarang</td>
+                                    <td>Web Developer</td>
+                                    <td>PT. Pertamina</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-2022</td>
+                                    <td>Frontend Developer</td>
+                                    <td>CV. Teknologi Maju</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-2020</td>
+                                    <td>Junior Developer</td>
+                                    <td>Freelance</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Password"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                    <div id="loginAlert" style="margin-top: 15px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Website E-Commerce</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop"
+                        class="img-responsive" alt="Project 1" style="margin-bottom: 20px;">
+                    <h4>Deskripsi Proyek</h4>
+                    <p>Platform e-commerce modern yang dikembangkan dengan teknologi terkini untuk memberikan pengalaman
+                        berbelanja online yang seamless dan user-friendly.</p>
+
+                    <h4>Fitur Utama:</h4>
+                    <ul>
+                        <li>Sistem katalog produk dengan filter dan pencarian advanced</li>
+                        <li>Keranjang belanja dan wishlist</li>
+                        <li>Integrasi payment gateway (Midtrans, GoPay, OVO)</li>
+                        <li>Dashboard admin untuk manajemen produk dan pesanan</li>
+                        <li>Responsive design untuk semua perangkat</li>
+                    </ul>
+
+                    <h4>Teknologi yang Digunakan:</h4>
+                    <p>
+                        <span class="label label-primary">HTML5</span>
+                        <span class="label label-info">CSS3</span>
+                        <span class="label label-success">JavaScript</span>
+                        <span class="label label-warning">PHP</span>
+                        <span class="label label-danger">MySQL</span>
+                        <span class="label label-default">Bootstrap</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Aplikasi Mobile - Task Manager</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop"
+                        class="img-responsive" alt="Project 2" style="margin-bottom: 20px;">
+                    <h4>Deskripsi Proyek</h4>
+                    <p>Aplikasi mobile produktivitas untuk membantu pengguna mengelola tugas harian dengan efisien.
+                        Aplikasi ini dirancang dengan antarmuka yang intuitif dan fitur-fitur canggih.</p>
+
+                    <h4>Fitur Utama:</h4>
+                    <ul>
+                        <li>Manajemen tugas dengan kategori dan prioritas</li>
+                        <li>Reminder dan notifikasi push</li>
+                        <li>Kalender terintegrasi</li>
+                        <li>Sinkronisasi cloud antar perangkat</li>
+                        <li>Mode dark/light theme</li>
+                        <li>Statistik produktivitas</li>
+                    </ul>
+
+                    <h4>Teknologi yang Digunakan:</h4>
+                    <p>
+                        <span class="label label-primary">React Native</span>
+                        <span class="label label-info">Firebase</span>
+                        <span class="label label-success">Redux</span>
+                        <span class="label label-warning">Node.js</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Achievement - Top Global Valorant Asian Pacific</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=400&fit=crop"
+                        class="img-responsive" alt="Project 3" style="margin-bottom: 20px;">
+                    <h4>Deskripsi Achievement</h4>
+                    <p>Pencapaian luar biasa dalam kompetisi gaming Valorant tingkat Asia Pasifik, menunjukkan dedikasi
+                        dan skill gaming yang tinggi.</p>
+
+                    <h4>Detail Achievement:</h4>
+                    <ul>
+                        <li>Rank: Radiant (Top 500 Asia Pacific)</li>
+                        <li>Main Role: Duelist & Controller</li>
+                        <li>Win Rate: 65%</li>
+                        <li>Tournament Participation: 15+ Regional Tournaments</li>
+                        <li>Best Achievement: Top 8 VCT Challengers</li>
+                    </ul>
+
+                    <h4>Skill Gaming:</h4>
+                    <p>
+                        <span class="label label-danger">Aim Precision</span>
+                        <span class="label label-warning">Game Sense</span>
+                        <span class="label label-info">Team Communication</span>
+                        <span class="label label-success">Strategic Planning</span>
+                    </p>
+
+                    <div class="alert alert-success">
+                        <strong>Fun Fact:</strong> Gaming skill membantu meningkatkan problem-solving dan quick decision
+                        making dalam programming!
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        $(document).ready(function () {
+            // Smooth scrolling
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    var hash = this.hash;
+                    if ($(hash).length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top - 50
+                        }, 800);
+                    }
+                }
+            });
+
+            // Active navigation on scroll
+            $(window).scroll(function () {
+                var scrollPos = $(document).scrollTop();
+                $('.navbar-nav li a').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.length && refElement.position().top - 100 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.navbar-nav li').removeClass("active");
+                        currLink.parent().addClass("active");
+                    }
+                });
+            });
+
+            // Contact Form Handler
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+
+                $('#formAlert').html('<div class="alert alert-success"><strong>Sukses!</strong> Pesan dari ' + name + ' telah terkirim. Kami akan segera menghubungi Anda di ' + email + '.</div>');
+
+                // Reset form
+                $('#contactForm')[0].reset();
+
+                // Hide alert after 5 seconds
+                setTimeout(function () {
+                    $('#formAlert').fadeOut();
+                }, 5000);
+            });
+
+            // Login Form Handler
+            $('#loginForm').submit(function (e) {
+                e.preventDefault();
+                var username = $('#username').val();
+
+                $('#loginAlert').html('<div class="alert alert-success">Selamat datang, ' + username + '!</div>');
+
+                // Close modal after 2 seconds
+                setTimeout(function () {
+                    $('#loginModal').modal('hide');
+                    $('#loginForm')[0].reset();
+                    $('#loginAlert').html('');
+                }, 2000);
+            });
+
+            // Registration Form Handler
+            $('#registrationForm').submit(function (e) {
+                e.preventDefault();
+
+                // Ambil data form
+                var fullname = $('#fullname').val();
+                var nim = $('#nim').val();
+                var email = $('#reg_email').val();
+                var program = $('#program').val();
+
+                // Validasi minimal satu minat bidang dipilih
+                var interests = $('input[name="interest[]"]:checked').length;
+                if (interests === 0) {
+                    $('#registerAlert').html('<div class="alert alert-warning"><strong>Perhatian!</strong> Pilih minimal satu minat bidang.</div>');
+                    return false;
+                }
+
+                // Tampilkan pesan sukses
+                $('#registerAlert').html(
+                    '<div class="alert alert-success">' +
+                    '<strong>Registrasi Berhasil!</strong><br>' +
+                    'Terima kasih <strong>' + fullname + '</strong> (NIM: ' + nim + ').<br>' +
+                    'Data registrasi Anda untuk Program Studi <strong>' + program + '</strong> telah kami terima.<br>' +
+                    'Email konfirmasi akan dikirim ke <strong>' + email + '</strong>.' +
+                    '</div>'
+                );
+
+                // Scroll ke alert
+                $('html, body').animate({
+                    scrollTop: $('#registerAlert').offset().top - 100
+                }, 500);
+
+                // Reset form setelah 5 detik
+                setTimeout(function () {
+                    $('#registrationForm')[0].reset();
+                    $('#registerAlert').fadeOut(function () {
+                        $(this).html('').show();
+                    });
+                }, 8000);
+            });
+        });
+    </script>
+</body>
+
+</html>
